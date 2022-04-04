@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "conversebot-sadd",
+  "private_key_id": "36430f82416a729d4523e9bcebd1693effce6b0c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC6E3BEoSjqknqX\nZPC+iH1LcXpmH5QHGMFMOXjIPbU7Mx1ChUPIIlWshnMWTX9l1RjayhnNW6I8kry3\n5Ca2yYzXZxy7nRr0RADDxcgJZZ6rtWl8VtZx1FtFsfBFJu9BxKmXp5Q+pAso4LpW\n1qRlb1q13N9iA7QcHNHLiqAKOFj/k2mhUt3gFTWdfMswn4wTjyhgNnaMBWrD+jfq\nycjMyVDcaGpetUEAZuPfCtvqPn88+W/u4gJamGD3HAcoL6MET8or8RpOHUhrj+E2\n+B5J91gUV9jbfQ1ygc5TPLBsJaVc3tPzblXirfeCe+v29IXpfasheQtvT612VnBe\nfvmza9PTAgMBAAECggEADoRfuOr93zcoW1Fjuum5JL6otvj1uowC4KiHNNAjqIe3\nW647+Iw9NOWUawQG0XILq14jHzNr99/W213wa0hUNaX0xupd5Pq9OIjgr2L/OxQ/\nM5Uuy9iuekSEo1CDUBVAyfUoCq8Ps9O8lfPPBZ7na9LclrAFSEAzWfbpv4Jf5yh+\nAG/RPnIuYS0w23pkXlfEl1u55PNRjz9lvHXvB+Jwc2+ysyAk/418tXMhbKxAMX51\nsg7DEFMBjO9C0OMlxz5eF30bgjKz/D0jqOPhnI0pvLXIN4GGt9jTOsZ727EQ5+20\n+07dxj4iZHMUzwRSHUxpgNbcLQI4UrtCr2wivpLdeQKBgQDeWP1S5wK1D5cAoi6q\nl5C99tYTbwN/DHsgf/zEfU7q/4vKxFskVVXLTpTyTcEZPByzvncPct83hqSz9X70\nYqiZ/kSHepIrRE+JNa2LP30T8ElWeXPvHDDtL7pPaJyc7+K+q4rFh05HvsIW4GjP\n2XrkivR6xzbWNGhWRe2860TpJwKBgQDWPRPrSpzMymbdsvp6AZHSDAh0TZAwlSbS\nVG/QmU44gcejURwSK0SNoKQIKbL6eBe0zZwcKEIOJ60PmSHNtFJBW+1pjfzcN6rk\n/w+rM8uc6ycliqdsea/n0Vx+2IfAU9HUcQCzGVaK1boR3cL67PyTwYIpOMZpXBYv\nl1mAvUGzdQKBgBNVw7mo0whxsZzhfZNiGLkcNON9vN0YdcCOwKlJiEpRLJPWXWKc\ndRh33eXwMwGBw7Ext+LFB3opoDrx9zdDOQwjG0x4sStIBm6VF2FLhRHtzELTzuwV\nFIAbrWToYO4Ywiv4eNnSeVEt2mzo2NRyQgiLuNTQbAlWh1gxPoo2H0jzAoGBAJ2C\nRD3OGl/6QwymBL9kngf27tRLHkKJtgQXLioIPFkRGWy6OlAlXX5e55pUxhCd8Jfu\nPuL4ui/b/cGlDRRGid8hrffX+1sQ1mUMHUH6j61rudlBCnyXLrvZ0g40NgIx3eg5\nuJD0hQsHvYhbKXoAeGZNc9vIsR9PI8STmqsq+b3tAoGAdUsPlQc/Kj9sOTeyo6Go\ntBBKCq1sJmr6rKRGk2vPCd9Tr5E/lt0OBeOf3A3vyhTTNVGD/t41RufuHwcfjSdh\nxDETxXnQXYsy9fd08VJGRaQNkmlGRivRkb0Kb/yHIeRfx/65Jup0y9W1im13gJKw\n+dXixbNzdFh+zb3Nm1LMXM4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "flutterdialogflow@conversebot-sadd.iam.gserviceaccount.com",
+  "client_id": "103567370461582787130",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/flutterdialogflow%40conversebot-sadd.iam.gserviceaccount.com"
+}
