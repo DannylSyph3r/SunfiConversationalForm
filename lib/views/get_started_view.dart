@@ -106,7 +106,7 @@ class GetStartedView extends StatelessWidget {
                           padding: const EdgeInsets.only(top: 37),
                           child: ElevatedButton(
                               onPressed: () {},
-                              child: const Text("Get Started",
+                              child: const Text("Continue",
                               style: TextStyle(
                                 fontFamily: 'SFProDisplay',
                                 fontWeight: FontWeight.w600,
