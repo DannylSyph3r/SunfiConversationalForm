@@ -64,8 +64,8 @@ flutter:
         - asset: Fonts/SFProDisplay/SF-Pro-Display-Regular.otf
         - asset: Fonts/SFProDisplay/SF-Pro-Display-Semibold.otf
 
-
   uses-material-design: true
+  
   assets:
     - assets/apikey.json
     - assets/avatars/man.png
@@ -75,6 +75,7 @@ flutter:
     - assets/SunFiLogo/Logo Yellow Blue with Transparent Background.png
     - assets/SunFiLogo/Logo Yellow Blue with White Background.png
     - assets/Illustrations/Welcome.png
+    - assets/Illustrations/New Illustrations/new 5.png
 
 
 

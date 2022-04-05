@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
 import 'package:flutterbotv2/message.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class FlutterFactsChatBot extends StatefulWidget {
   FlutterFactsChatBot({Key key, this.title}) : super(key: key);
@@ -17,7 +18,7 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
 
   Widget _queryInputWidget(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30))),
       child: Padding(
         padding: const EdgeInsets.only(left:8.0, right: 8),
@@ -27,10 +28,8 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
               child: TextField(
                 controller: _textController,
                 onSubmitted: _submitQuery,
-                decoration: InputDecoration.collapsed(
-                  hintText: 'Send a message...'
-                ).copyWith(
-                  contentPadding: EdgeInsets.fromLTRB(8, 0, 8, 0)
+                decoration:  InputDecoration.collapsed(hintText: 'Send a message...',).copyWith(
+                  contentPadding: const EdgeInsets.fromLTRB(8, 0, 8, 0)
                 )
               ),
             ),
@@ -82,14 +81,17 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("SunFi", style: TextStyle(color: Colors.white),),
-        backgroundColor: Colors.lightBlue.shade900,
+        title: Image.asset('assets/SunFiLogo/Logo Yellow White with Transparent Background.png',
+          fit: BoxFit.contain,
+          height: 23,
+        ),
+        backgroundColor: HexColor("#011A3C"),
         elevation: 0,
       ),
       body: Column(children: <Widget>[
         Flexible(
             child: ListView.builder(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               reverse: true, //To keep the latest messages at the bottom
               itemBuilder: (_, int index) => messageList[index],
               itemCount: messageList.length,
