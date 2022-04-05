@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbotv2/dialog_flow.dart';
-import 'package:flutterbotv2/views/get_started_view.dart';
+import 'package:flutterbotv2/views/get_started.dart';
 
 void main() => runApp(MyApp());
 

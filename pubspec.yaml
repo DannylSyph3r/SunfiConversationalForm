@@ -62,6 +62,7 @@ flutter:
     - family: SFProDisplay
       fonts:
         - asset: Fonts/SFProDisplay/SF-Pro-Display-Regular.otf
+        - asset: Fonts/SFProDisplay/SF-Pro-Display-Semibold.otf
 
 
   uses-material-design: true
@@ -71,6 +72,9 @@ flutter:
     - assets/avatars/user.png
     - assets/SunFiLogo/Logo Yellow White with Transparent Background.png
     - assets/Illustrations/solar_city_with_transparent_background_card_towards_the_right.png
+    - assets/SunFiLogo/Logo Yellow Blue with Transparent Background.png
+    - assets/SunFiLogo/Logo Yellow Blue with White Background.png
+    - assets/Illustrations/Welcome.png
 
 
 
