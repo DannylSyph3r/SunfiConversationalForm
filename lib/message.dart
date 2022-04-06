@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Facts extends StatelessWidget {
   const Facts({Key key, this.text, this.name, this.type}) : super(key: key);
@@ -61,7 +62,7 @@ class Facts extends StatelessWidget {
             ),
 //            Text(this.name, style: Theme.of(context).textTheme.subhead),
             Card(
-                color: Colors.lightBlue.shade900,
+                color: HexColor('#011A3C'),
                 shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20))
                 ),
@@ -77,7 +78,7 @@ class Facts extends StatelessWidget {
         margin: const EdgeInsets.only(left: 10.0),
         child: const CircleAvatar(
           backgroundImage: AssetImage("assets/avatars/user.png"),
-          backgroundColor: Colors.white, radius: 16,),
+          backgroundColor: Colors.white, radius: 14,),
       ),
     ];
   }

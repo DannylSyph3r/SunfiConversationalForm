@@ -1,3 +1,4 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
 import 'package:flutterbotv2/message.dart';
@@ -36,7 +37,9 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 4.0),
               child: IconButton(
-                  icon: Icon(Icons.send, color: Colors.lightBlue.shade900,),
+                  icon: Icon(EvaIcons.paperPlaneOutline,
+                      color: Colors.blue.shade900,
+                  ),
                   onPressed: () => _submitQuery(_textController.text)),
             ),
           ],
