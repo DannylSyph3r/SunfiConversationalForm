@@ -102,7 +102,7 @@ class GetStartedView extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => SelectInfoUploadStageView())
+                          MaterialPageRoute(builder: (context) => const SelectInfoUploadStageView())
                       );
                     },
                     child: const Text("Get Started",

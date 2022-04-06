@@ -109,7 +109,7 @@ class WelcomeView extends StatelessWidget {
                               onPressed: () {
                                 Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => GetStartedView())
+                                    MaterialPageRoute(builder: (context) => const GetStartedView())
                                 );
                               },
                               child: const Text("Continue",
