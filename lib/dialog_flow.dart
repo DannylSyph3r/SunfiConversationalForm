@@ -1,6 +1,9 @@
+import 'package:dialogflow_flutter/googleAuth.dart';
+import 'package:dialogflow_flutter/language.dart';
+import 'package:dialogflow_flutter/message.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dialogflow/dialogflow_v2.dart';
+import 'package:dialogflow_flutter/dialogflowFlutter.dart';
 import 'package:flutterbotv2/message.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -52,8 +55,8 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
     _textController.clear();
     AuthGoogle authGoogle =
     await AuthGoogle(fileJson: "assets/apikey.json").build();
-    Dialogflow dialogFlow =
-    Dialogflow(authGoogle: authGoogle, language: Language.english);
+    DialogFlow dialogFlow =
+    DialogFlow(authGoogle: authGoogle, language: Language.english);
     AIResponse response = await dialogFlow.detectIntent(query);
     Facts message = Facts(
       text: response.getMessage() ??
