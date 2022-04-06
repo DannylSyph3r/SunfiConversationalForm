@@ -1,4 +1,6 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterbotv2/views/select_info_stage_view.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class GetStartedView extends StatelessWidget {
@@ -14,13 +16,29 @@ class GetStartedView extends StatelessWidget {
         child: ListView(
           scrollDirection: Axis.vertical,
           children: [
+            Container(
+            ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: 100,
+                  width: 400,
                   height: 120,
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: TextButton.icon(
+                      icon: const Icon(EvaIcons.arrowIosBackOutline),
+                      onPressed: () => Navigator.pop(context),
+                      style: TextButton.styleFrom(
+                        primary: HexColor('#011A3C'),
+                      ),
+                      label: const Text("Back",
+                      style: TextStyle(
+                        fontSize: 16
+                      ),),
+                    ),
+                  ),
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/SunFiLogo/Logo Yellow Blue with Transparent Background.png"),
@@ -81,7 +99,12 @@ class GetStartedView extends StatelessWidget {
                   //alignment: Alignment.center,
                   padding: const EdgeInsets.only(top: 15, bottom: 60),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SelectInfoUploadStageView())
+                      );
+                    },
                     child: const Text("Get Started",
                       style: TextStyle(
                           fontFamily: 'SFProDisplay',

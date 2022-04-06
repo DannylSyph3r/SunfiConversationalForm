@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'SFProDisplay',
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue).copyWith(secondary: Colors.blue),
       ),
-      home: FlutterFactsChatBot(),
+      home: WelcomeView(),
     );
   }
 }

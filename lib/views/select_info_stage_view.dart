@@ -1,5 +1,6 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterbotv2/dialog_flow.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class SelectInfoUploadStageView extends StatelessWidget {
@@ -11,6 +12,17 @@ class SelectInfoUploadStageView extends StatelessWidget {
       backgroundColor: HexColor('#E5E5E5'),
       appBar: AppBar(
         centerTitle: true,
+        leading: TextButton.icon(
+          icon: const Icon(EvaIcons.arrowIosBackOutline),
+          onPressed: () => Navigator.pop(context),
+          style: TextButton.styleFrom(
+            primary: Colors.white,
+          ),
+          label: const Text("",
+            style: TextStyle(
+                fontSize: 19
+            ),),
+        ),
         title: Image.asset('assets/SunFiLogo/Logo Yellow White with Transparent Background.png',
           fit: BoxFit.contain,
           height: 20.72,
@@ -69,7 +81,12 @@ class SelectInfoUploadStageView extends StatelessWidget {
                               padding: const EdgeInsets.only(right: 15),
                               child: TextButton.icon(
                                   icon: const Icon(EvaIcons.checkmark),
-                                  onPressed: () => Navigator.pop(context),
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => FlutterFactsChatBot())
+                                    );
+                                  },
                                   style: TextButton.styleFrom(
                                   primary: HexColor('#011A3C'),
                                 ),

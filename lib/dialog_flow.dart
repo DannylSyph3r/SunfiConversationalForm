@@ -83,6 +83,20 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: TextButton.icon(
+          icon: const Icon(EvaIcons.arrowIosBackOutline),
+          onPressed: () {
+            int count = 0;
+            Navigator.of(context).popUntil((_) => count++ >= 2);
+          },
+          style: TextButton.styleFrom(
+            primary: Colors.white,
+          ),
+          label: const Text("",
+            style: TextStyle(
+                fontSize: 9
+            ),),
+        ),
         centerTitle: true,
         title: Image.asset('assets/SunFiLogo/Logo Yellow White with Transparent Background.png',
           fit: BoxFit.contain,

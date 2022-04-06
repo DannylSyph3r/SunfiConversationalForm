@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:flutterbotv2/views/get_started.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({Key key}) : super(key: key);
@@ -105,7 +106,12 @@ class WelcomeView extends StatelessWidget {
                           alignment: Alignment.center,
                           padding: const EdgeInsets.only(top: 37),
                           child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => GetStartedView())
+                                );
+                              },
                               child: const Text("Continue",
                               style: TextStyle(
                                 fontFamily: 'SFProDisplay',
