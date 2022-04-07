@@ -4,7 +4,7 @@ import 'package:flutterbotv2/views/select_info_stage_view.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class GetStartedView extends StatelessWidget {
-  const GetStartedView({Key key}) : super(key: key);
+  const GetStartedView({required Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +16,6 @@ class GetStartedView extends StatelessWidget {
         child: ListView(
           scrollDirection: Axis.vertical,
           children: [
-            Container(
-            ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -102,7 +100,7 @@ class GetStartedView extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const SelectInfoUploadStageView())
+                          MaterialPageRoute(builder: (context) => const SelectInfoUploadStageView(key: null,))
                       );
                     },
                     child: const Text("Get Started",

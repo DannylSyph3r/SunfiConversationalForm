@@ -3,7 +3,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:flutterbotv2/views/get_started.dart';
 
 class WelcomeView extends StatelessWidget {
-  const WelcomeView({Key key}) : super(key: key);
+  const WelcomeView({required Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +109,7 @@ class WelcomeView extends StatelessWidget {
                               onPressed: () {
                                 Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => const GetStartedView())
+                                    MaterialPageRoute(builder: (context) => const GetStartedView(key: null,))
                                 );
                               },
                               child: const Text("Continue",

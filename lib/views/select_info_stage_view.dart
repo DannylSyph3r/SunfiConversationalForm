@@ -1,10 +1,11 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterbotv2/dialog_flow.dart';
+import 'package:flutterbotv2/views/upload_documents.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class SelectInfoUploadStageView extends StatelessWidget {
-  const SelectInfoUploadStageView({Key key}) : super(key: key);
+  const SelectInfoUploadStageView({required Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +85,7 @@ class SelectInfoUploadStageView extends StatelessWidget {
                                   onPressed: () {
                                     Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) => FlutterFactsChatBot())
+                                        MaterialPageRoute(builder: (context) => FlutterFactsChatBot(title: '',))
                                     );
                                   },
                                   style: TextButton.styleFrom(
@@ -155,7 +156,12 @@ class SelectInfoUploadStageView extends StatelessWidget {
                               padding: const EdgeInsets.only(right: 15),
                               child: TextButton.icon(
                                 icon: const Icon(EvaIcons.checkmark),
-                                onPressed: () => Navigator.pop(context),
+                                onPressed: (){
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => UploadDocumentsView())
+                                  );
+                                },
                                 style: TextButton.styleFrom(
                                   primary: HexColor('#011A3C'),
                                 ),

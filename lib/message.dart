@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class Facts extends StatelessWidget {
-  const Facts({Key key, this.text, this.name, this.type}) : super(key: key);
+  const Facts({Key? key, required this.text, required this.name, required this.type}) : super(key: key);
 
-  final String text;
+  final String? text;
   final String name;
   final bool type;
 
@@ -38,7 +38,7 @@ class Facts extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
-                  child: Text(text, ),
+                  child: Text(text!, ),
                 )
             ),
           ],
@@ -68,7 +68,7 @@ class Facts extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
-                  child: Text(text, style: const TextStyle(color: Colors.white),),
+                  child: Text(text!, style: const TextStyle(color: Colors.white),),
                 )
             ),
           ],

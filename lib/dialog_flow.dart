@@ -8,7 +8,7 @@ import 'package:flutterbotv2/message.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class FlutterFactsChatBot extends StatefulWidget {
-  FlutterFactsChatBot({Key key, this.title}) : super(key: key);
+  const FlutterFactsChatBot({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -30,18 +30,18 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
           children: <Widget>[
             Flexible(
               child: TextField(
-                controller: _textController,
-                onSubmitted: _submitQuery,
-                decoration:  InputDecoration.collapsed(hintText: 'Send a message...',).copyWith(
-                  contentPadding: const EdgeInsets.fromLTRB(8, 0, 8, 0)
-                )
+                  controller: _textController,
+                  onSubmitted: _submitQuery,
+                  decoration:  InputDecoration.collapsed(hintText: 'Send a message...',).copyWith(
+                      contentPadding: const EdgeInsets.fromLTRB(8, 0, 8, 0)
+                  )
               ),
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 4.0),
               child: IconButton(
                   icon: Icon(EvaIcons.paperPlaneOutline,
-                      color: Colors.blue.shade900,
+                    color: Colors.blue.shade900,
                   ),
                   onPressed: () => _submitQuery(_textController.text)),
             ),
@@ -60,7 +60,7 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
     AIResponse response = await dialogFlow.detectIntent(query);
     Facts message = Facts(
       text: response.getMessage() ??
-          CardDialogflow(response.getListMessage()[0]).title,
+          CardDialogflow(response.getListMessage()![0]).title,
       name: "Flutter",
       type: false,
     );
