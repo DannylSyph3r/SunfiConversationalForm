@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutterbotv2/views/get_started.dart';
+import 'package:page_transition/page_transition.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({required Key? key}) : super(key: key);
@@ -107,10 +108,13 @@ class WelcomeView extends StatelessWidget {
                           padding: const EdgeInsets.only(top: 37),
                           child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => const GetStartedView(key: null,))
-                                );
+                               Navigator.of(context).push(PageTransition(
+                                   child: const GetStartedView(key: null,),
+                                   type: PageTransitionType.rightToLeftJoined,
+                                   childCurrent: this,
+                                   duration: const Duration(milliseconds: 250),
+                                   reverseDuration: const Duration(milliseconds: 250),
+                               ));
                               },
                               child: const Text("Continue",
                               style: TextStyle(

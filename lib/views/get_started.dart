@@ -2,6 +2,7 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterbotv2/views/select_info_stage_view.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:page_transition/page_transition.dart';
 
 class GetStartedView extends StatelessWidget {
   const GetStartedView({required Key? key}) : super(key: key);
@@ -98,10 +99,13 @@ class GetStartedView extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 15, bottom: 60),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const SelectInfoUploadStageView(key: null,))
-                      );
+                      Navigator.of(context).push(PageTransition(
+                        child: const SelectInfoUploadStageView(key: null,),
+                        type: PageTransitionType.rightToLeftJoined,
+                        childCurrent: this,
+                        duration: const Duration(milliseconds: 250),
+                        reverseDuration: const Duration(milliseconds: 250),
+                      ));
                     },
                     child: const Text("Get Started",
                       style: TextStyle(

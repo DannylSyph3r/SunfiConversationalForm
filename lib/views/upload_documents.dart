@@ -20,7 +20,7 @@ class _UploadDocumentsState extends State<UploadDocumentsView> {
 
   @override
   Widget build(BuildContext context) {
-    final fileName = file != null ? basename(file!.path) : 'No File Selected';
+    final fileName = file != null ? basename(file!.path) : 'No Files Selected';
 
     return Scaffold(
       backgroundColor: HexColor('#E5E5E5'),
