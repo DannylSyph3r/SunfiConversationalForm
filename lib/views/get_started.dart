@@ -101,10 +101,10 @@ class GetStartedView extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).push(PageTransition(
                         child: const SelectInfoUploadStageView(key: null,),
-                        type: PageTransitionType.rightToLeftJoined,
+                        type: PageTransitionType.rightToLeftWithFade,
                         childCurrent: this,
-                        duration: const Duration(milliseconds: 250),
-                        reverseDuration: const Duration(milliseconds: 250),
+                        duration: const Duration(milliseconds: 300),
+                        reverseDuration: const Duration(milliseconds: 300),
                       ));
                     },
                     child: const Text("Get Started",

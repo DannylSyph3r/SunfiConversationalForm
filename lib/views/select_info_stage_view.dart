@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterbotv2/dialog_flow.dart';
 import 'package:flutterbotv2/views/upload_documents.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SelectInfoUploadStageView extends StatelessWidget {
   const SelectInfoUploadStageView({required Key? key}) : super(key: key);
@@ -83,10 +84,13 @@ class SelectInfoUploadStageView extends StatelessWidget {
                               child: TextButton.icon(
                                   icon: const Icon(EvaIcons.checkmark),
                                   onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(builder: (context) => FlutterFactsChatBot(title: '',))
-                                    );
+                                    Navigator.of(context).push(PageTransition(
+                                      child: const FlutterFactsChatBot(title: '',),
+                                      type: PageTransitionType.rightToLeftWithFade,
+                                      childCurrent: this,
+                                      duration: const Duration(milliseconds: 300),
+                                      reverseDuration: const Duration(milliseconds: 300),
+                                    ));
                                   },
                                   style: TextButton.styleFrom(
                                   primary: HexColor('#011A3C'),
@@ -157,10 +161,13 @@ class SelectInfoUploadStageView extends StatelessWidget {
                               child: TextButton.icon(
                                 icon: const Icon(EvaIcons.checkmark),
                                 onPressed: (){
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => UploadDocumentsView())
-                                  );
+                                  Navigator.of(context).push(PageTransition(
+                                    child: const UploadDocumentsView(key: null,),
+                                    type: PageTransitionType.rightToLeftWithFade,
+                                    childCurrent: this,
+                                    duration: const Duration(milliseconds: 300),
+                                    reverseDuration: const Duration(milliseconds: 300),
+                                  ));
                                 },
                                 style: TextButton.styleFrom(
                                   primary: HexColor('#011A3C'),
@@ -186,13 +193,16 @@ class SelectInfoUploadStageView extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  width: 260,
-                  height: 370,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("assets/Illustrations/New Illustrations/new 5.png"),
-                        fit: BoxFit.fitHeight
+                Padding(
+                  padding: const EdgeInsets.only(top:40.0),
+                  child: Container(
+                    width: 280,
+                    height: 270,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("assets/Illustrations/new 7_3.png"),
+                          fit: BoxFit.fitHeight
+                      ),
                     ),
                   ),
                 )

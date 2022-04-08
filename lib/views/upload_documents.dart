@@ -50,50 +50,95 @@ class _UploadDocumentsState extends State<UploadDocumentsView> {
 
       body: Container(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child: ListView(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 20,),
-                child: ElevatedButton.icon(
-                  onPressed: selectFile,
-                  icon: const Icon(EvaIcons.attach),
-                  label: const Text("Select Files", style: TextStyle(
-                    fontSize: 17
-                  ),),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.blue.shade900),
+                          borderRadius: BorderRadius.all(Radius.circular(20))
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 10.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Padding(
+                              padding: EdgeInsets.all(15.0),
+                              child: Text.rich(
+                                TextSpan(
+                                  children: [
+                                    WidgetSpan(child: Icon(EvaIcons.alertTriangleOutline)),
+                                    TextSpan(text: ' Please upload a picture of yourself and the necessary documents to validate your', style: TextStyle(
+                                      fontSize: 16
+                                    ),),
+                                    TextSpan(text: ' Identiy and Credit Information', style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16
+                                    ),),
+                                    TextSpan(text: ' to be able to qualify for access to an energy solution!', style: TextStyle(
+                                      fontSize: 16
+                                    ),),
+                                    TextSpan(text: ' Please upload them one at a time',style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      fontSize: 16
+                                    ),),
+                                  ],
+                                )
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 50,),
+                    child: ElevatedButton.icon(
+                      onPressed: selectFile,
+                      icon: const Icon(EvaIcons.attach),
+                      label: const Text("Select Files", style: TextStyle(
+                        fontSize: 17
+                      ),),
 
-                  style: ElevatedButton.styleFrom(
-                    primary: HexColor("#011A3C"),
-                    fixedSize: const Size(380,60),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
+                      style: ElevatedButton.styleFrom(
+                        primary: HexColor("#011A3C"),
+                        fixedSize: const Size(380,60),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-             SizedBox(height: 8),
-             Text(
-                fileName,
-                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-             ),
-              Padding(
-                padding: const EdgeInsets.only(top: 60,bottom: 50),
-                child: ElevatedButton.icon(
-                  onPressed: uploadFile,
-                    icon: const Icon(EvaIcons.cloudUploadOutline),
-                    label: const Text("Upload Files",
-                    style: TextStyle(
-                      fontSize: 17
-                    ),),
-                    style: ElevatedButton.styleFrom(
-                    primary: HexColor("#011A3C"),
-                    fixedSize: const Size(380,60),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
+                 SizedBox(height: 8),
+                 Text(
+                    fileName,
+                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                 ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 40,bottom: 20),
+                    child: ElevatedButton.icon(
+                      onPressed: uploadFile,
+                        icon: const Icon(EvaIcons.cloudUploadOutline),
+                        label: const Text("Upload Files",
+                        style: TextStyle(
+                          fontSize: 17
+                        ),),
+                        style: ElevatedButton.styleFrom(
+                        primary: HexColor("#011A3C"),
+                        fixedSize: const Size(380,60),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
+                    ),
                   ),
-                ),
+                  SizedBox(height: 50),
+                  task != null ? buildUploadStatus(task!) : Container(),
+                ],
               ),
-              SizedBox(height: 20),
-              task != null ? buildUploadStatus(task!) : Container(),
             ],
           ),
         ),
@@ -125,19 +170,46 @@ class _UploadDocumentsState extends State<UploadDocumentsView> {
 
     print('Download-Link: $urlDownload');
   }
-
   Widget buildUploadStatus(UploadTask task) => StreamBuilder<TaskSnapshot>(
     stream: task.snapshotEvents,
     builder: (context, snapshot) {
       if (snapshot.hasData) {
         final snap = snapshot.data!;
-        final progress = snap.bytesTransferred / snap.totalBytes;
-        final percentage = (progress * 100).toStringAsFixed(2);
+        double progress = snap.bytesTransferred / snap.totalBytes;
+        //final percentage = (progress * 100).toStringAsFixed(2);
 
-        return Text(
-          '$percentage %',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        return SizedBox(
+          height: 50,
+          width: 300,
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(30)),
+                child: LinearProgressIndicator(
+                value: progress,
+                backgroundColor: Colors.grey,
+                color: HexColor("#004AAD"),
+                ),
+              ),
+              Center(
+                child: Text(
+                  '${(100 * progress).roundToDouble()}%',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+            ],
+          ),
         );
+
+        //return Text(
+         // '$percentage %',
+          //style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+       // );
       } else {
         return Container();
       }

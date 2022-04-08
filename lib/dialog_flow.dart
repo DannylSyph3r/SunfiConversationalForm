@@ -85,6 +85,7 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: HexColor('#E5E5E5'),
       appBar: AppBar(
         leading: TextButton.icon(
           icon: const Icon(EvaIcons.arrowIosBackOutline),
