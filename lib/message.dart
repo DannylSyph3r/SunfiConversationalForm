@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat_bubble/bubble_type.dart';
+import 'package:flutter_chat_bubble/chat_bubble.dart';
+import 'package:flutter_chat_bubble/clippers/chat_bubble_clipper_1.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class Facts extends StatelessWidget {
@@ -26,21 +29,26 @@ class Facts extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 3),
               child: const Text(
                 '     Daniel from Sunfi',
-                style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800),
               ),
             ),
 //            Text(this.name,
 //                style: TextStyle(fontWeight: FontWeight.bold)),
-            Card(
-                elevation: 3,
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20))
+            ChatBubble(
+              elevation: 10,
+              clipper: ChatBubbleClipper1(type: BubbleType.receiverBubble, nipWidth: 5, nipRadius: 2),
+              backGroundColor: Colors.white,
+              margin: EdgeInsets.only(top: 5),
+              child: Container(
+                constraints: BoxConstraints(
+                  maxWidth: MediaQuery.of(context).size.width * 0.7,
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Text(text!, ),
-                )
-            ),
+                  padding: const EdgeInsets.only(top: 3.5, left: 1, bottom: 3.5, right: 1),
+                  child: Text(text! ),
+                ),
+              ),
+            )
           ],
         ),
       ),
@@ -57,20 +65,28 @@ class Facts extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 3),
               child: const Text(
                 'You     ',
-                style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800),
               ),
             ),
 //            Text(this.name, style: Theme.of(context).textTheme.subhead),
-            Card(
-                color: HexColor('#011A3C'),
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20))
+            ChatBubble(
+              elevation: 10,
+              clipper: ChatBubbleClipper1(type: BubbleType.sendBubble, nipWidth: 5, nipRadius: 2),
+              alignment: Alignment.topRight,
+              margin: EdgeInsets.only(top: 5),
+              backGroundColor: HexColor("#011A3C"),
+              child: Container(
+                constraints: BoxConstraints(
+                  maxWidth: MediaQuery.of(context).size.width * 0.7,
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Text(text!, style: const TextStyle(color: Colors.white),),
-                )
-            ),
+                  padding: const EdgeInsets.only(top: 3.5, left: 1, bottom: 3.5, right: 1),
+                  child: Text(
+                      text!, style: const TextStyle(color: Colors.white)
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
