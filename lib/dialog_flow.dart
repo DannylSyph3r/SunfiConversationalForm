@@ -18,7 +18,26 @@ class FlutterFactsChatBot extends StatefulWidget {
 
 class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
   final List<Facts> messageList = <Facts>[];
-  final TextEditingController _textController = new TextEditingController();
+  late TextEditingController _textController;
+  bool isButtonActive = true;
+
+  @override
+  void initState(){
+    super.initState();
+
+    _textController = TextEditingController();
+    _textController.addListener(() {
+      final isButtonActive = _textController.text.isNotEmpty;
+      setState(() => this.isButtonActive = isButtonActive);
+    });
+  }
+
+  @override
+  void dispose(){
+    _textController.dispose();
+    super.dispose();
+  }
+
 
   Widget _queryInputWidget(BuildContext context) {
     return Card(
@@ -43,7 +62,13 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
                   icon: Icon(EvaIcons.paperPlaneOutline,
                     color: Colors.blue.shade900,
                   ),
-                  onPressed: () => _submitQuery(_textController.text)),
+                  onPressed: isButtonActive
+                  ? () {
+                      setState(() => isButtonActive = false);
+                      _submitQuery(_textController.text);
+                     }
+                    : null,
+              ),
             ),
           ],
         ),

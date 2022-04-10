@@ -32,7 +32,7 @@ class GetStartedView extends StatelessWidget {
                       style: TextButton.styleFrom(
                         primary: HexColor('#011A3C'),
                       ),
-                      label: const Text("Back",
+                      label: const Text("",
                       style: TextStyle(
                         fontSize: 16
                       ),),
@@ -73,7 +73,7 @@ class GetStartedView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 36.0, right: 36.0),
                   child: SizedBox(
-                    width: 300,
+                    width: 303,
                     height: 104,
                     child: Column(
                       children: [

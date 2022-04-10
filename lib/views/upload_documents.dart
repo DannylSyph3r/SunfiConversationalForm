@@ -74,18 +74,18 @@ class _UploadDocumentsState extends State<UploadDocumentsView> {
                                   children: [
                                     WidgetSpan(child: Icon(EvaIcons.alertTriangleOutline)),
                                     TextSpan(text: ' Please upload a picture of yourself and the necessary documents to validate your', style: TextStyle(
-                                      fontSize: 16
+                                      fontSize: 17
                                     ),),
                                     TextSpan(text: ' Identiy and Credit Information', style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 16
+                                      fontSize: 17
                                     ),),
                                     TextSpan(text: ' to be able to qualify for access to an energy solution!', style: TextStyle(
-                                      fontSize: 16
+                                      fontSize: 17
                                     ),),
                                     TextSpan(text: ' Please upload them one at a time',style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                      fontSize: 16
+                                      fontSize: 17
                                     ),),
                                   ],
                                 )
@@ -97,7 +97,7 @@ class _UploadDocumentsState extends State<UploadDocumentsView> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 50,),
+                    padding: const EdgeInsets.only(top: 50, left: 15, right: 15),
                     child: ElevatedButton.icon(
                       onPressed: selectFile,
                       icon: const Icon(EvaIcons.attach),
@@ -119,7 +119,7 @@ class _UploadDocumentsState extends State<UploadDocumentsView> {
                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                  ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40,bottom: 20),
+                    padding: const EdgeInsets.only(top: 40,bottom: 20, left: 15, right: 15),
                     child: ElevatedButton.icon(
                       onPressed: uploadFile,
                         icon: const Icon(EvaIcons.cloudUploadOutline),

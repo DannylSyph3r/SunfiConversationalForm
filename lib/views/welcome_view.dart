@@ -74,7 +74,7 @@ class WelcomeView extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.only(left: 37.0, top: 35.0),
                           child: SizedBox(
-                            width: 350,
+                            width: 280,
                             height: 78,
                             child: Padding(
                               padding: const EdgeInsets.only(left: 0.0),

@@ -40,7 +40,7 @@ class SelectInfoUploadStageView extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.only(top: 40, bottom: 15),
+                  padding: const EdgeInsets.only(top: 40, bottom: 15, left: 15, right: 15),
                   child: ElevatedButton(
                     onPressed: () {
                       showDialog(
@@ -117,7 +117,7 @@ class SelectInfoUploadStageView extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.only(top: 20, bottom: 20),
+                  padding: const EdgeInsets.only(top: 20, bottom: 20, left: 15, right: 15),
                   child: ElevatedButton(
                     onPressed: () {
                       showDialog(

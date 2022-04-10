@@ -38,6 +38,7 @@ dependencies:
   firebase_storage: ^10.2.10
   file_picker: ^4.5.1
   page_transition: ^2.0.5
+  animated_text_kit: ^4.2.1
 
 dev_dependencies:
   flutter_test:
