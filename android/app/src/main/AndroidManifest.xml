@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="se.dannyl.flutterbotv2">
    <application
-        android:label="flutterbotv2"
+        android:label="SunFi"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

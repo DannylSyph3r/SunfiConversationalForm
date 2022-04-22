@@ -33,18 +33,18 @@ class _UploadDocumentsState extends State<UploadDocumentsView> {
             Navigator.of(context).popUntil((_) => count++ >= 2);
           },
           style: TextButton.styleFrom(
-            primary: Colors.white,
+            primary: HexColor("#011A3C"),
           ),
           label: const Text("",
             style: TextStyle(
                 fontSize: 9
             ),),
         ),
-        title: Image.asset('assets/SunFiLogo/Logo Yellow White with Transparent Background.png',
+        title: Image.asset('assets/SunFiLogo/Logo Blue Blue with Transparent Background.png',
           fit: BoxFit.contain,
-          height: 20.72,
+          height: 120,
         ),
-        backgroundColor: HexColor("#011A3C"),
+        backgroundColor: HexColor('#E5E5E5'),
         elevation: 0,
       ),
 

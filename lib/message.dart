@@ -45,7 +45,7 @@ class Facts extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 3.5, left: 1, bottom: 3.5, right: 1),
-                  child: Text(text! ),
+                  child: SelectableText(text! ),
                 ),
               ),
             )
@@ -81,7 +81,7 @@ class Facts extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 3.5, left: 1, bottom: 3.5, right: 1),
-                  child: Text(
+                  child: SelectableText(
                       text!, style: const TextStyle(color: Colors.white)
                   ),
                 ),
