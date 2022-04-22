@@ -18,18 +18,18 @@ class SelectInfoUploadStageView extends StatelessWidget {
           icon: const Icon(EvaIcons.arrowIosBackOutline),
           onPressed: () => Navigator.pop(context),
           style: TextButton.styleFrom(
-            primary: Colors.white,
+            primary: HexColor("#011A3C"),
           ),
           label: const Text("",
             style: TextStyle(
                 fontSize: 19
             ),),
         ),
-        title: Image.asset('assets/SunFiLogo/Logo Yellow White with Transparent Background.png',
+        title: Image.asset('assets/SunFiLogo/Logo Yellow Blue with Transparent Background.png',
           fit: BoxFit.contain,
-          height: 20.72,
+          height: 120,
         ),
-        backgroundColor: HexColor("#011A3C"),
+        backgroundColor: HexColor('#E5E5E5'),
         elevation: 0,
       ),
       body: ListView(
@@ -64,7 +64,7 @@ class SelectInfoUploadStageView extends StatelessWidget {
                             ],
                           ),
                           content: const Text(
-                            "You are about to begin a chat session with the sunFi chatbot to collect your personal information. Please begin the conversation with a Hi or a Hello. Please give straight answers for yes or no questions! And state you would like an energy offer when you are asked what you want do! And reply with exactly the suggested answers provided if there are any included with the questions!",
+                            "You are about to begin a chat session with the sunFi chatbot to collect your personal information. Please begin the conversation with a Hi or a Hello. And specify you are here for an Energy Solution offer. Read all messages and instructions carefully! And please ensure you have a stable INTERNET CONNECTION! this is very important.",
                             textAlign: TextAlign.justify,
                             style: TextStyle(
                               fontWeight: FontWeight.w500

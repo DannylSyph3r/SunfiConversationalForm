@@ -119,7 +119,7 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
             Navigator.of(context).popUntil((_) => count++ >= 2);
           },
           style: TextButton.styleFrom(
-            primary: Colors.white,
+            primary: Colors.black,
           ),
           label: const Text("",
             style: TextStyle(
@@ -127,11 +127,11 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
             ),),
         ),
         centerTitle: true,
-        title: Image.asset('assets/SunFiLogo/Logo Yellow White with Transparent Background.png',
+        title: Image.asset('assets/SunFiLogo/Logo Blue Blue with Transparent Background.png',
           fit: BoxFit.contain,
-          height: 23,
+          height: 120,
         ),
-        backgroundColor: HexColor("#011A3C"),
+        backgroundColor: HexColor('#E5E5E5'),
         elevation: 0,
       ),
       body: Column(children: <Widget>[

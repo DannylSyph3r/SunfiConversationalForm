@@ -41,20 +41,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDY9wR2r8On3IFCEgkmxOUdwHvXBYocy2U',
-    appId: '1:791194895215:android:90fc14d8f46c0f68511e9a',
-    messagingSenderId: '791194895215',
-    projectId: 'conversationalform-43d0c',
-    storageBucket: 'conversationalform-43d0c.appspot.com',
+    apiKey: 'AIzaSyBdHId9b5Ex9CRHEtQydS3FEGnbxFozZNA',
+    appId: '1:489071176145:android:f9d9fbb4f93946387258f0',
+    messagingSenderId: '489071176145',
+    projectId: 'conversebot-sadd',
+    storageBucket: 'conversebot-sadd.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBcTfnbqeGmDmrOqhEFjicqmt8ztSXaHeE',
-    appId: '1:791194895215:ios:59b5320e09c07ecc511e9a',
-    messagingSenderId: '791194895215',
-    projectId: 'conversationalform-43d0c',
-    storageBucket: 'conversationalform-43d0c.appspot.com',
-    iosClientId: '791194895215-dr442pharisqdj6o8oseevckr3g8cfjs.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCdxp_4cD1zmZ7YFXd2WtMf35MQppvkE5M',
+    appId: '1:489071176145:ios:6e81ff4d66d99ef27258f0',
+    messagingSenderId: '489071176145',
+    projectId: 'conversebot-sadd',
+    storageBucket: 'conversebot-sadd.appspot.com',
+    iosClientId: '489071176145-d96sb8reech01b8og3ld7kqkvahd7eoj.apps.googleusercontent.com',
     iosBundleId: 'se.dannyl.flutterbotv2',
   );
 }
