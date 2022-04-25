@@ -41,7 +41,8 @@ class SelectInfoUploadStageView extends StatelessWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 40, bottom: 15, left: 15, right: 15),
-                  child: ElevatedButton(
+                  child: ElevatedButton.icon(
+                    icon: const Icon(EvaIcons.personDoneOutline),
                     onPressed: () {
                       showDialog(
                         context: context,
@@ -102,7 +103,7 @@ class SelectInfoUploadStageView extends StatelessWidget {
                         ),
                       );
                     },
-                    child: const Text("Provide User Information",
+                    label: const Text("Provide User Information",
                       style: TextStyle(
                           fontFamily: 'SFProDisplay',
                           fontWeight: FontWeight.w700,
@@ -118,7 +119,8 @@ class SelectInfoUploadStageView extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 20, left: 15, right: 15),
-                  child: ElevatedButton(
+                  child: ElevatedButton.icon(
+                    icon: const Icon(EvaIcons.cloudUploadOutline),
                     onPressed: () {
                       showDialog(
                         context: context,
@@ -179,7 +181,7 @@ class SelectInfoUploadStageView extends StatelessWidget {
                         ),
                       );
                     },
-                    child: const Text("Upload Documents",
+                    label: const Text("Upload Documents",
                       style: TextStyle(
                           fontFamily: 'SFProDisplay',
                           fontWeight: FontWeight.w600,
